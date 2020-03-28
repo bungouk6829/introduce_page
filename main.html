@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" conetent="width-device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="static/css/reset.css">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/bootstrap/css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+  <title>Introduce Kim</title>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.mobile_toggle_menu').click(function(){
+        $('.mobile_toggle_menu_fade').fadeIn(700);
+    });
+    $('.toggle_close').click(function(){
+      $('.mobile_toggle_menu_fade').fadeOut(700);
+    });
+    $('.aboutme_anchor').click(function(){
+      $('.mobile_toggle_menu_fade').fadeOut(700);
+      var offset = $('#aboutme_section').offset();
+      $('html').animate({scrollTop : offset.top}, 400);
+    });
+
+    $('.photo_anchor').click(function(){
+      $('.mobile_toggle_menu_fade').fadeOut(700);
+      var offset = $('#photo_section').offset();
+      $('html').animate({scrollTop : offset.top}, 400);
+    });
+
+    $('.footer_anchor').click(function(){
+      $('.mobile_toggle_menu_fade').fadeOut(700);
+      var offset = $('#footer_section').offset();
+      $('html').animate({scrollTop : offset.top}, 400);
+    });
+  });
+  </script>
+</head>
+<body>
+<div class="wrap">
+  <header id="header_section">
+    <div class="sub_header">
+    <div class="menu">
+      <div class="name">
+        <h1>Byeonguk Kim</h1>
+      </div>
+      <nav class="pc_menu">
+        <ul>
+          <li><a class="aboutme_anchor">About me</a></li>
+          <li><a class="photo_anchor">Photos</a></li>
+          <li><a class="footer_anchor">Contact & Github</a></li>
+        </ul>
+      </nav>
+      <div class="mobile_toggle_menu">
+        <span class="menu_icon"><a><img class="mobile_toggle_menu"src="static/resource/menu_icon.png"></a></span>
+      </div>
+      <div class="mobile_toggle_menu_fade">
+        <span class="toggle_close"><a><img src="static/resource/close_icon.svg"></a></span>
+        <ul>
+          <li><a class="aboutme_anchor">About me</a></li>
+          <li><a class="photo_anchor">Photos</a></li>
+          <li><a class="footer_anchor">Contact & Github</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="introduce_section">
+      <h1>Hello, I'm</h1>
+      <h1>Byeonguk Kim</h1>
+      <h1>wecode 8기 / 김병욱</h1>
+    </div>
+    </div>
+    <div class="main_image_section">
+      <img src="static/resource/profile.jpg">
+    </div>
+  </header>
+  <section id="aboutme_section">
+    <h1>About Me</h1>
+    <div class="sub_aboutme">
+    <p>안녕하세요! wecode 8기 김병욱 입니다. 반갑습니다! 올해 27 이구요, 경기도 안산을 살고 있답니다!
+      저는 어렸을 적 부터 프로그래밍에 관심이 많았습니다.
+    관심만 많았을 뿐이지 코딩은 성인이 되서 접했습니다! 강원대학교에서 안경광학을 공부하다가 빅데이터와
+  웹에 관심이 생겨 중퇴하고 일하면서 학원도 다니고 독학도 조금이나마 공부 하였습니다. 아는 게임통계업체 대표님이
+   여러 사람들과 같이 스터디그룹이나 프로젝트를 진행하면 좋다는 조언을 들어 여러 부트캠프를 알아보다 위코드에
+ 오게 되었습니다. 여러가지로 부족한 저 이지만 잘 배우고 잘 알아듣는 스타일이라 열심히 따라가겠습니다!
+<br><br>
+ 또한 저는 노는걸 좋아해 캠핑, 골프, 스노우보드, 자전거 등 취미가 아주 많습니다! 놀때 불러만 주시면
+ 열심히 아주 잘 놀아요!
+</p>
+</div>
+  </section>
+  <section id="photo_section">
+    <h1>Photos</h1>
+    <img src="static/resource/paris1.jpg">
+    <img src="static/resource/paris2.jpg">
+    <img src="static/resource/snow3.jpg">
+    <img src="static/resource/snow4.jpg">
+    <img src="static/resource/camping1.jpg">
+    <img src="static/resource/camping2.jpg">
+  </section>
+  <footer id="footer_section">
+    <h1>Contact & Github</h1>
+    <div class="discription">
+      <p>김병욱</p>
+      <p>Byeonguk Kim</p>
+      <p>Email - bungouk6829@gmail.com</p>
+    </div>
+    <nav class="sns_menu">
+      <span><a href="https://www.instagram.com/2272buk/" target="_self">
+        <img src="static/resource/instagram_icon.png"></a></span>
+      <span><a href="https://github.com/bungouk6829/web" target="_self">
+        <img src="static/resource/github_icon.svg"></a></span>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
