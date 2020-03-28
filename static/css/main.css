@@ -213,6 +213,7 @@ body{
     order:2;
     display: inline-block;
     color:white;
+    margin-top: 50px;
   }
   .pc_menu li{
     display: inline;
