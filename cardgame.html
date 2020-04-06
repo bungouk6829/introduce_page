@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" conetent="width-device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="static/css/reset.css">
+  <link rel="stylesheet" href="static/css/cardgame.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>Mini game : Card game</title>
+</head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.mobile_toggle_menu').click(function(){
+      $('.mobile_toggle_menu_fade').fadeIn(700);
+      $('.wrap').on('scroll touchmove mousewheel', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      });
+  });
+  $('.toggle_close').click(function(){
+    $('.mobile_toggle_menu_fade').fadeOut(700);
+    $('.wrap').off('scroll touchmove mousewheel');
+  });
+});
+</script>
+<body>
+<div class="wrap">
+  <div class="menu">
+    <div class="name">
+      <h1>Byeonguk Kim</h1>
+    </div>
+    <nav class="pc_menu">
+      <ul>
+        <li><a class="main_page_move" href="main.html">Main Page</a></li>
+      </ul>
+    </nav>
+    <div class="mobile_toggle_menu">
+      <span class="menu_icon"><a><img class="mobile_toggle_menu"src="static/resource/menu_icon.png"></a></span>
+    </div>
+    <div class="mobile_toggle_menu_fade">
+      <span class="toggle_close"><a><img src="static/resource/close_icon.svg"></a></span>
+      <ul>
+        <li><a class="main_page_move" href="main.html">Main Page</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="mobile">
+    <h1>✺ 1025 픽셀 이상의 pc만 지원합니다.</h1>
+    <br><br><br><br><br>
+    <a href="main.html">클릭시 메인페이지로 이동합니다.</a>
+  </div>
+  <div class="game_board">
+    <span class="card" id="card1"></span>
+    <span class="card" id="card2"></span>
+    <span class="card" id="card3"></span>
+    <span class="card" id="card4"></span>
+    <span class="card" id="card5"></span>
+    <span class="card" id="card6"></span>
+    <span class="card" id="card7"></span>
+    <span class="card" id="card8"></span>
+    <span class="card" id="card9"></span>
+    <span class="card" id="card10"></span>
+  </div>
+  <div class="play_btn">
+  <button onclick="gameStart()" class="play-button">Play</button>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src ="static/js/cardgame.js"></script>
+</html>

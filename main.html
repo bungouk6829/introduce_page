@@ -5,7 +5,7 @@
   <meta name="viewport" conetent="width-device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="static/css/reset.css">
   <link rel="stylesheet" href="static/css/main.css">
-  <link rel="stylesheet" href="static/css/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="static/css/Swiper-3.4.2/dist/css/swiper.min.css">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
   <title>Introduce Kim</title>
@@ -14,9 +14,15 @@
   $(document).ready(function(){
     $('.mobile_toggle_menu').click(function(){
         $('.mobile_toggle_menu_fade').fadeIn(700);
+        $('.wrap').on('scroll touchmove mousewheel', function(event) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        });
     });
     $('.toggle_close').click(function(){
       $('.mobile_toggle_menu_fade').fadeOut(700);
+      $('.wrap').off('scroll touchmove mousewheel');
     });
     $('.aboutme_anchor').click(function(){
       $('.mobile_toggle_menu_fade').fadeOut(700);
@@ -26,7 +32,7 @@
 
     $('.photo_anchor').click(function(){
       $('.mobile_toggle_menu_fade').fadeOut(700);
-      var offset = $('#photo_section').offset();
+      var offset = $('.swiper-container').offset();
       $('html').animate({scrollTop : offset.top}, 400);
     });
 
@@ -51,6 +57,8 @@
           <li><a class="aboutme_anchor">About me</a></li>
           <li><a class="photo_anchor">Photos</a></li>
           <li><a class="footer_anchor">Contact & Github</a></li>
+          <li><a href="cardgame.html">Card GAME</a></li>
+          <li><a href="tetrisgame.html">TETRIS GAME</a></li>
         </ul>
       </nav>
       <div class="mobile_toggle_menu">
@@ -62,6 +70,8 @@
           <li><a class="aboutme_anchor">About me</a></li>
           <li><a class="photo_anchor">Photos</a></li>
           <li><a class="footer_anchor">Contact & Github</a></li>
+          <li><a href="cardgame.html">Card GAME</a></li>
+          <li><a href="tetrisgame.html">TETRIS</a></li>
         </ul>
       </div>
     </div>
@@ -90,13 +100,24 @@
 </p>
 </div>
   </section>
-  <section id="photo_section">
+  <div class="swiper-container">
     <h1>Photos</h1>
-    <img src="static/resource/busan2.jpg">
-    <img src="static/resource/paris1.jpg">
-    <img src="static/resource/paris2.jpg">
-    <img src="static/resource/snow3.jpg">
-    <img src="static/resource/snow4.jpg">
+  <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="static/resource/busan2.jpg"></div>
+        <div class="swiper-slide"><img src="static/resource/paris1.jpg"></div>
+        <div class="swiper-slide"><img src="static/resource/paris2.jpg"></div>
+        <div class="swiper-slide"><img src="static/resource/snow3.jpg"></div>
+        <div class="swiper-slide"><img src="static/resource/snow4.jpg"></div>
+  </div>
+  <div class="swiper-pagination">
+  </div>
+  <script src="static/css/Swiper-3.4.2/dist/js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+    </script>
   </section>
   <footer id="footer_section">
     <h1>Contact & Github</h1>
