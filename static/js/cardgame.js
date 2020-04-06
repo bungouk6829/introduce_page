@@ -72,7 +72,7 @@ function game(){
             cardNext= this;
             setTimeout(function() {
               isEqual(1);
-            }, 1000);
+            }, 500);
           }
           break;
         case '2':
@@ -85,7 +85,7 @@ function game(){
             cardNext= this;
             setTimeout(function() {
               isEqual(2);
-            }, 1000);
+            }, 500);
           }
           break;
         case '3':
@@ -98,7 +98,7 @@ function game(){
             cardNext= this;
             setTimeout(function() {
               isEqual(3);
-            }, 1000);
+            }, 500);
 
           }
           break;
@@ -112,7 +112,7 @@ function game(){
             cardNext= this;
             setTimeout(function() {
               isEqual(4);
-            }, 1000);
+            }, 500);
           }
           break;
         case '5':
@@ -125,7 +125,7 @@ function game(){
             cardNext= this;
             setTimeout(function() {
               isEqual(5);
-            }, 1000);
+            }, 500);
           }
           break;
       }
